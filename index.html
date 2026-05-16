@@ -1,767 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Sports | Premium Sports Accessories Wholesaler in Mianwali</title>
-    <meta name="description"
-        content="Master Sports is the premier sports accessories wholesaler in Mianwali, Pakistan. We offer top-quality gear for cricket, football, badminton, boxing, and athletics at wholesale rates.">
+    <title>Master Sports | Premium Sports E-Commerce</title>
+    <meta name="description" content="Shop premium sports gear at Master Sports. Wholesale and retail prices for cricket, football, tennis, and more.">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            --primary-green: #0a381f;
-            --secondary-green: #115732;
-            --accent-gold: #d4af37;
-            --light-gold: #f4d03f;
-            --dark-gold: #b5952f;
-            --text-light: #f8f9fa;
-            --text-dark: #1a1a1a;
-            --bg-light: #ffffff;
-            --bg-gray: #f5f7f6;
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-padding {
-            padding: 6rem 0;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            font-size: 1.1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-gold {
-            background-color: var(--accent-gold);
-            color: var(--primary-green);
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .btn-gold:hover {
-            background-color: var(--light-gold);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
-
-        .btn-green {
-            background-color: var(--primary-green);
-            color: var(--accent-gold);
-            border: 2px solid var(--accent-gold);
-        }
-
-        .btn-green:hover {
-            background-color: var(--accent-gold);
-            color: var(--primary-green);
-        }
-
-        /* Header / Navbar */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(10, 56, 31, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--text-light);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo i {
-            color: var(--accent-gold);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .whatsapp-nav-btn {
-            background: #25D366;
-            color: white;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .whatsapp-nav-btn:hover {
-            background: #20bd5a;
-            transform: scale(1.05);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(10, 56, 31, 0.85), rgba(10, 56, 31, 0.95)), url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1920&q=80') center/cover;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding-top: 5rem;
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.2);
-            color: var(--accent-gold);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            border: 1px solid var(--accent-gold);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            color: var(--text-light);
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-
-        .hero h1 span {
-            color: var(--accent-gold);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #ddd;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Products Section */
-        .products-section {
-            background-color: var(--bg-gray);
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-green);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .section-header .divider {
-            height: 4px;
-            width: 80px;
-            background-color: var(--accent-gold);
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .product-card {
-            background: var(--bg-light);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
-            border: 2px solid transparent;
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-gold);
-            box-shadow: 0 20px 40px rgba(10, 56, 31, 0.12);
-        }
-
-        .product-img-wrap {
-            height: 220px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .product-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .product-card:hover .product-img-wrap img {
-            transform: scale(1.08);
-        }
-
-        .product-img-wrap .overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(10, 56, 31, 0.8) 0%, transparent 60%);
-        }
-
-        .product-icon {
-            position: absolute;
-            bottom: -25px;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--primary-green);
-            color: var(--accent-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: var(--transition);
-            z-index: 2;
-        }
-        
-        .product-card:hover .product-icon {
-            background: var(--accent-gold);
-            color: var(--primary-green);
-            transform: rotateY(180deg);
-        }
-
-        .product-content {
-            padding: 2.5rem 2rem 2rem 2rem;
-            background: var(--bg-light);
-            position: relative;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-content h3 {
-            font-size: 1.5rem;
-            color: var(--primary-green);
-            margin-bottom: 0.8rem;
-            font-weight: 700;
-        }
-
-        .product-content p {
-            color: #555;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background-color: var(--bg-light);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .contact-info {
-            background: var(--primary-green);
-            color: var(--text-light);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(10, 56, 31, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0) 70%);
-            border-radius: 50%;
-        }
-
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--accent-gold);
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.2rem;
-            margin-bottom: 1.8rem;
-        }
-
-        .info-item .icon {
-            background: rgba(212, 175, 55, 0.2);
-            color: var(--accent-gold);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .info-item div h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-            font-weight: 600;
-            color: var(--accent-gold);
-        }
-
-        .info-item div p {
-            font-size: 1rem;
-            color: #ddd;
-            line-height: 1.5;
-        }
-
-        .map-container {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-            height: 100%;
-            min-height: 400px;
-            border: 4px solid var(--accent-gold);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-green);
-            color: var(--text-light);
-            padding: 2rem 0;
-            text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        footer p {
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Menu Toggle */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--accent-gold);
-            font-size: 1.8rem;
-            cursor: pointer;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .map-container {
-                min-height: 350px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 70px);
-                background: var(--primary-green);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                transition: var(--transition);
-                gap: 2.5rem;
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links a {
-                font-size: 1.5rem;
-            }
-
-            .whatsapp-nav-btn {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-padding {
-                padding: 4rem 0;
-            }
-        }
-    </style>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
     <!-- Header -->
     <header>
-        <div class="container nav-container">
+        <div class="container header-inner">
             <a href="#" class="logo">
                 <i class="fa-solid fa-trophy"></i> Master Sports
             </a>
 
             <nav>
-                <ul class="nav-links" id="navLinks">
+                <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li>
-                        <!-- Mobile Whatsapp Button inside menu -->
-                        <a href="https://wa.me/923347250000" target="_blank" class="whatsapp-mobile-btn"
-                            style="color: #25D366; display: none;">
-                            <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
-                        </a>
-                    </li>
                 </ul>
             </nav>
 
-            <a href="https://wa.me/923347250000" target="_blank" class="whatsapp-nav-btn">
-                <i class="fa-brands fa-whatsapp"></i> Chat Now
-            </a>
-
-            <button class="mobile-menu-btn" id="menuBtn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="header-actions">
+                <button class="cart-btn" onclick="openCart()">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <a href="https://wa.me/923347250000" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Support
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">PREMIUM QUALITY GEAR</div>
-                <h1>Elevate Your Game with <span>Master Sports</span></h1>
-                <p>The leading wholesale provider of premium sports accessories in Mianwali. Discover our vast
-                    collection of high-performance gear designed for champions.</p>
-                <div class="hero-btns">
-                    <a href="https://wa.me/923347250000" target="_blank" class="btn btn-gold">
-                        <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
-                    </a>
-                    <a href="#products" class="btn btn-green">
-                        Explore Catalog <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
+                <h1>Elevate Your <span>Performance</span></h1>
+                <p>Mianwali's premier destination for high-performance sports gear. From local academies to professional athletes, we equip champions.</p>
+                <a href="#shop" class="btn btn-primary">
+                    Shop Collection <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products-section section-padding">
+    <!-- Shop Section -->
+    <section id="shop" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Categories</h2>
-                <div class="divider"></div>
-                <p style="margin-top: 1rem; color: #666;">We provide top-tier accessories for every major sport at
-                    unbeatable wholesale prices.</p>
-            </div>
+            <h2 class="section-title">Explore Our Gear</h2>
+            
+            <div class="shop-container">
+                <!-- Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <ul class="filter-list">
+                            <li class="filter-item active" data-category="all">All Equipment</li>
+                            <li class="filter-item" data-category="Cricket">Cricket</li>
+                            <li class="filter-item" data-category="Football">Football</li>
+                            <li class="filter-item" data-category="Badminton">Badminton</li>
+                            <li class="filter-item" data-category="Tennis">Tennis</li>
+                            <li class="filter-item" data-category="Boxing">Boxing</li>
+                            <li class="filter-item" data-category="Footwear">Footwear</li>
+                            <li class="filter-item" data-category="Clothing">Clothing</li>
+                            <li class="filter-item" data-category="Athletics">Athletics</li>
+                        </ul>
+                    </div>
+                </aside>
 
-            <div class="products-grid">
-                <!-- Cricket -->
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cricket Gear">
-                        <div class="overlay"></div>
-                        <div class="product-icon"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+                <!-- Product Display -->
+                <main>
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products injected by JS -->
                     </div>
-                    <div class="product-content">
-                        <h3>Cricket Gear</h3>
-                        <p>Professional bats, premium leather balls, pads, gloves, and complete kits for all levels.</p>
-                    </div>
-                </div>
-
-                <!-- Football -->
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Football Gear">
-                        <div class="overlay"></div>
-                        <div class="product-icon"><i class="fa-regular fa-futbol"></i></div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Football</h3>
-                        <p>Match balls, training balls, shin guards, boots, and goal-keeping accessories.</p>
-                    </div>
-                </div>
-
-                <!-- Badminton -->
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Badminton Gear">
-                        <div class="overlay"></div>
-                        <div class="product-icon"><i class="fa-solid fa-table-tennis-paddle-ball"></i></div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Badminton</h3>
-                        <p>Lightweight rackets, high-durability shuttlecocks, grip tapes, and professional nets.</p>
-                    </div>
-                </div>
-
-                <!-- Boxing -->
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Boxing Gear">
-                        <div class="overlay"></div>
-                        <div class="product-icon"><i class="fa-solid fa-mitten"></i></div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Boxing & MMA</h3>
-                        <p>Punching bags, professional gloves, hand wraps, and protective headgear.</p>
-                    </div>
-                </div>
-
-                <!-- Athletics -->
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Athletics Gear">
-                        <div class="overlay"></div>
-                        <div class="product-icon"><i class="fa-solid fa-person-running"></i></div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Athletics</h3>
-                        <p>Track equipment, hurdles, starting blocks, discuses, javelins, and performance wear.</p>
-                    </div>
-                </div>
-
-                <!-- Wholesale -->
-                <div class="product-card">
-                    <div class="product-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bulk Wholesale">
-                        <div class="overlay"></div>
-                        <div class="product-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-                    </div>
-                    <div class="product-content">
-                        <h3>Bulk Wholesale</h3>
-                        <p>Special discounted rates for academies, schools, and local retailers. Contact us for bulk deals.</p>
-                    </div>
-                </div>
+                </main>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Location Section -->
-    <section id="contact" class="contact-section section-padding">
+    <!-- About Section -->
+    <section id="about" class="section" style="background: var(--gray-50);">
         <div class="container">
-            <div class="section-header">
-                <h2>Visit Our Store</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="contact-grid">
-                <!-- Info Details -->
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-
-                    <div class="info-item">
-                        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Ballo Khel Road<br>Mianwali, Punjab, Pakistan</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="icon"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <h4>Phone & WhatsApp</h4>
-                            <p><a href="tel:03347250000" style="color: #ddd; text-decoration: none;">0334-7250000</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="icon"><i class="fa-solid fa-clock"></i></div>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday - Sunday<br>9:00 AM - 9:00 PM</p>
-                        </div>
-                    </div>
-
-                    <div style="margin-top: 3rem;">
-                        <a href="https://wa.me/923347250000" target="_blank" class="btn"
-                            style="background: white; color: var(--primary-green); width: 100%; justify-content: center;">
-                            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.2rem;"></i> Message Us
-                            Now
-                        </a>
-                    </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sports Gear" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                 </div>
-
-                <!-- Google Maps -->
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13410.706173099955!2d71.52445831349557!3d32.58474246067727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392138bcff76c66d%3A0xcdaaa2c4815a5101!2sBallo%20Khel%20Rd%2C%20Mianwali%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Why Choose <span>Master Sports</span>?</h2>
+                    <p style="margin-bottom: 2rem; color: var(--gray-700);">We have been serving Mianwali and surrounding areas for over a decade, providing top-quality equipment at unbeatable wholesale rates. Our gear is hand-picked for durability and performance.</p>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-check" style="color: var(--accent); font-weight: 900;"></i>
+                            Premium International Brands
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-check" style="color: var(--accent); font-weight: 900;"></i>
+                            Wholesale Pricing for Academies
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <i class="fa-solid fa-check" style="color: var(--accent); font-weight: 900;"></i>
+                            Expert Sports Consultancy
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div style="background: var(--primary); color: var(--white); padding: 3rem; border-radius: 20px;">
+                    <h3 style="color: var(--accent); margin-bottom: 2rem;">Contact Details</h3>
+                    <div style="margin-bottom: 1.5rem;">
+                        <p style="font-weight: 600; color: var(--accent);">Address</p>
+                        <p>Ballo Khel Road, Mianwali, Punjab</p>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <p style="font-weight: 600; color: var(--accent);">Phone</p>
+                        <p>0334-7250000</p>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <p style="font-weight: 600; color: var(--accent);">Email</p>
+                        <p>info@mastersports.com</p>
+                    </div>
+                </div>
+                <div style="border-radius: 20px; overflow: hidden; height: 350px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13410.706173099955!2d71.52445831349557!3d32.58474246067727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392138bcff76c66d%3A0xcdaaa2c4815a5101!2sBallo%20Khel%20Rd%2C%20Mianwali%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <div class="close-cart" onclick="closeCart()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items injected by JS -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">Rs. 0</span>
+                </div>
+                <button class="btn btn-primary checkout-btn" onclick="checkout()">
+                    Checkout via WhatsApp <i class="fa-brands fa-whatsapp"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Master Sports. All Rights Reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-trophy"></i> Master Sports
+                    </a>
+                    <p>Your ultimate destination for quality sports accessories in Mianwali. We believe in performance and durability.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <p><a href="#home" style="color: inherit; text-decoration: none;">Home</a></p>
+                    <p><a href="#shop" style="color: inherit; text-decoration: none;">Shop</a></p>
+                    <p><a href="#about" style="color: inherit; text-decoration: none;">About</a></p>
+                    <p><a href="#contact" style="color: inherit; text-decoration: none;">Contact</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <p>Mon - Fri: 9:00 AM - 9:00 PM</p>
+                    <p>Sat - Sun: 10:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Master Sports. Built with Passion for Athletes.
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = menuBtn.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-                // Show mobile whatsapp btn in menu
-                document.querySelector('.whatsapp-mobile-btn').style.display = 'block';
-            } else {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-                document.querySelector('.whatsapp-mobile-btn').style.display = 'none';
-            }
-        });
-
-        // Close menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                const icon = menuBtn.querySelector('i');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            });
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
-
 </html>
